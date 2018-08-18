@@ -12,11 +12,25 @@ class Ideone
 		char ch[]=str.toCharArray();
 		for(int i=0;i<str.length();i++)
 		{
-			int c=(int)ch[i]+3;
-			ch[i]=(char)c;
+			if(ch[i]=='x')
+			ch[i]='a';
+			else if(ch[i]=='X')
+			ch[i]='A';
+			else if(ch[i]=='y')
+			ch[i]='b';
+			else if(ch[i]=='Y')
+			ch[i]='B';
+			else if(ch[i]=='z')
+			ch[i]='c';
+			else if(ch[i]=='Z')
+			ch[i]='C';
+			else
+			{
+				int c=(int)ch[i]+3;
+				ch[i]=(char)c;
+			}
 		}
 		for(int i=0;i<str.length();i++)
 		System.out.print(ch[i]);
-		
 	}
 }
