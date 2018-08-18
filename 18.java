@@ -12,26 +12,23 @@ class Ideone
 		String str[]=new String[n];
 		for(int i=0;i<n;i++)
 		{
-			str[i]=s.nextLine();
+			str[i]=s.next();
 		}
-		System.out.print(str[2]);
 		String k="kabali";
 		char kc[]=k.toCharArray();
+		Arrays.sort(kc);
 		int cnt=0;
 		for(int i=0;i<n;i++)
 		{
 			char ch[]=new char[str[i].length()];
 			ch=str[i].toLowerCase().toCharArray();
+			Arrays.sort(ch);
 			if(Arrays.equals(kc,ch))
 			{
-			cnt++;
+			 cnt++;
 			}
-			
-			
-			
 		}
 		System.out.print(cnt);
-		
-		
+
 	}
 }
